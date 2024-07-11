@@ -1,5 +1,6 @@
 import sys
-from commands import helper, add,init
+from commands import helper, add, init
+from helpers import flags
 
 def main():
     if len(sys.argv) < 2:
@@ -15,8 +16,7 @@ def main():
     elif command == 'init':
         status, messege = init.initialize()
         
-        if not status:
-            return messege
+        return messege
     else:
         print(f"Unknown command: {command}")
 
