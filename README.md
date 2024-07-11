@@ -1,2 +1,2 @@
 # git-clone
-my git clone using python
+My git clone using python
