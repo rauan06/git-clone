@@ -1,9 +1,10 @@
 import os
 
 def initialize():
-    path = ".pit/"
-    if not os.path.exists(path):
-        os.mkdir(".pit/")
-    else:
-        return (False, "You already have initialized pit in this directory.")
-    
+    path = f'{os.getcwd() + "/.pit"}'
+
+    try:
+        os.makedirs(path, exist_ok=True)
+        return (True, f"Initialized empty Pit repository in {os.getcwd()}/.pit/")
+    except Exception as e:
+        return (False, f"Reinitialized existing Git repository in {os.getcwd()}/.pit/")
