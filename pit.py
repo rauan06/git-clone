@@ -14,7 +14,7 @@ def main():
     elif command == 'add':
         add.run()
     elif command == 'init':
-        status, messege = init.initialize()
+        messege = init.initialize()
         
         return messege
     else:
