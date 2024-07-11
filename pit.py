@@ -21,4 +21,4 @@ def main():
         print(f"Unknown command: {command}")
 
 if __name__ == "__main__":
-    print(main(), end="")
+    print(main())
